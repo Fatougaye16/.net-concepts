@@ -5,8 +5,8 @@ Console.WriteLine("Doing stuff");
 var sw = new Stopwatch();
 sw.Start();
 
-await WashClothesInTheMachineAsync();
-await MakeCoffeeAsync();
+WashClothesInTheMachine();
+MakeCoffee();
 Study();
 
 sw.Stop();
@@ -22,20 +22,20 @@ static void Study()
     Console.WriteLine("Studied");
 }
 
-static async Task MakeCoffeeAsync()
+static void MakeCoffee()
 {
     Console.WriteLine("Machine is making a coffee");
-    await Task.Delay(5000);
+    Task.Delay(5000).Wait();
     Console.WriteLine("Coffee is ready");
 }
 
-static async Task WashClothesInTheMachineAsync()
+static void WashClothesInTheMachine()
 {
     Console.WriteLine("Machine is starting");
-     await Task.Delay(5000);
+    Task.Delay(5000).Wait();
     Console.WriteLine("Clothes are being soaked and washed");
-    await Task.Delay(5000);
+    Task.Delay(5000).Wait();
     Console.WriteLine("Washing clothes");
-    await Task.Delay(1000);
+    Task.Delay(1000).Wait();
     Console.WriteLine("Done washing clothes");
 }
