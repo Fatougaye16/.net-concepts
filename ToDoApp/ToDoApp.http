@@ -1,0 +1,30 @@
+@ToDoApp_HostAddress = http://localhost:5103
+
+POST {{ToDoApp_HostAddress}}/todos
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Buy groceries",
+  "isComplete": false,
+  "createdAt": "2025-07-25T20:30:00Z",
+  "description": "Milk, eggs, bread, and fruits"
+}
+###
+
+GET {{ToDoApp_HostAddress}}/todos
+###
+
+PUT {{ToDoApp_HostAddress}}/todos/1
+Content-Type: application/json
+Accept: application/json
+
+{
+  "title": "Buy groceries at best",
+  "isComplete": false,
+  "createdAt": "2025-07-25T20:30:00Z",
+  "description": "Milk, eggs, bread, and fruits"
+}
+###
+
+DELETE {{ToDoApp_HostAddress}}/todos/1
