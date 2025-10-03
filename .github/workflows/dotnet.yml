@@ -19,3 +19,6 @@ on:
     - name: Build
       run: dotnet build --no-restore
    
+jobs:
+  my_first_job:
+    name: My first job
